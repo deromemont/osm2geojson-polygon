@@ -1,0 +1,27 @@
+{
+  "name": "osm2geojson-polygon",
+  "version": "0.8.0",
+  "description": "Make a Geojson polygon from an OSM id",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://deromemont@github.com/deromemont/osm2geojson-polygon.git"
+  },
+  "keywords": [
+    "osm",
+    "openstreetmap",
+    "geojson",
+    "polygon",
+    "overpass",
+    "turf"
+  ],
+  "author": "Charles de ROMEMONT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deromemont/osm2geojson-polygon/issues"
+  },
+  "homepage": "https://github.com/deromemont/osm2geojson-polygon#readme"
+}
