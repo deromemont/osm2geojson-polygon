@@ -2,4 +2,4 @@
 
 ## install
 
-    npm install geojson-osm2geojson-polygon
+    npm install osm2geojson-polygon
