@@ -3,7 +3,7 @@ var query_overpass = require('query-overpass');
 var turf = require('turf');
 var fc = require('turf-featurecollection');
 
-module.exports = function(id) {
+module.exports = function(id, callback) {
   query_overpass('[out:json];relation('+id+');>;out;', function(error, data){
     linestringArray = [];
     pointPolygon = [];
@@ -54,13 +54,13 @@ module.exports = function(id) {
 
     if(linestringArray.length == 0){
       try {
-        return fc([turf.polygon(pointPolygon)]));
+        callback(fc([turf.polygon(pointPolygon)]));
       }
       catch (e) {
-         return false;
+         callback(false);
       }
     }else{
-      return false;
+      callback(false);
     }
 
   }, {flatProperties:true});

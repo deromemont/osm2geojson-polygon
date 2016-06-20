@@ -1,6 +1,6 @@
 {
   "name": "osm2geojson-polygon",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Make a Geojson polygon from an OSM id",
   "main": "index.js",
   "scripts": {
