@@ -47,15 +47,11 @@ module.exports = function(id, callback) {
         }
       }
 
-      /*pointPolygon.forEach(function(polygon,index) {
-        if(polygon[0][0] != polygon[polygon.length-1][0] || polygon[0][1] != polygon[polygon.length-1][1]){
-          pointPolygon[index].push(pointPolygon[index][0]);
-        }
-      });*/
-
       if(linestringArray.length == 0){
         try {
-          callback(fc([turf.polygon(pointPolygon)]));
+          var poly1 = turf.polygon(pointPolygon);
+          var poly2 = turf.polygon(pointPolygon, {bbox:turf.bbox(poly1)});
+          callback(fc([poly2]));
         }
         catch (e) {
            callback(false);
